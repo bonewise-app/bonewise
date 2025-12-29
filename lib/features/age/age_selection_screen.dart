@@ -1,3 +1,4 @@
+import 'package:bonewise/features/age/pediatric_disclaimer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../app_strings.dart';
@@ -11,37 +12,56 @@ class AgeSelectionScreen extends StatefulWidget {
 }
 
 class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
-  String? selectedKey;
-  String? selectedLabel;
+  String? selected;
 
-  String extractAgeRange(String label) {
-    return label.split('(').first.trim();
-  }
-
-  final List<Map<String, String>> ageGroups = const [
-    {'key': '0_1', 'label': AppStrings.age_0_1},
-    {'key': '1_3', 'label': AppStrings.age_1_3},
-    {'key': '4_10', 'label': AppStrings.age_4_10},
-    {'key': '10_17', 'label': AppStrings.age_10_17},
-    {'key': '18_30', 'label': AppStrings.age_18_30},
-    {'key': '30_40', 'label': AppStrings.age_30_40},
-    {'key': '40_60', 'label': AppStrings.age_40_60},
-    {'key': '60_plus', 'label': AppStrings.age_60_plus},
+  final List<Map<String, String>> options = const [
+    {
+      'key': 'parents',
+      'label': AppStrings.parentsCaregivers,
+    },
+    {
+      'key': '18_30',
+      'label': AppStrings.age_18_30,
+    },
+    {
+      'key': '30_40',
+      'label': AppStrings.age_30_40,
+    },
+    {
+      'key': '40_60',
+      'label': AppStrings.age_40_60,
+    },
+    {
+      'key': '60_plus',
+      'label': AppStrings.age_60_plus,
+    },
   ];
 
-  Future<void> _continue() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('selected_age_key', selectedKey!);
-    await prefs.setString('selected_age_label', selectedLabel!);
+  void _continue() async{
+    if (selected == 'parents') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const PediatricDisclaimerScreen(),
+        ),
+      );
+    } else {
+      final selectedOption =
+      options.firstWhere((e) => e['key'] == selected);
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('selected_age_key', selectedOption['key']!);
+      await prefs.setString('selected_age_label', selectedOption['label']!);
 
-    if (!mounted) return;
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => AgeDashboardScreen(ageKey: selectedKey!, ageLabel: extractAgeRange(selectedLabel!)),
-      ),
-    );
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => AgeDashboardScreen(
+            ageKey: selectedOption['key']!,
+            ageLabel: selectedOption['label']!,
+          ),
+        ),
+      );
+    }
   }
 
   @override
@@ -54,26 +74,26 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: ageGroups.length,
-                itemBuilder: (context, index) {
-                  final group = ageGroups[index];
-                  final selected = selectedKey == group['key'];
-
+                itemCount: options.length,
+                itemBuilder: (_, index) {
+                  final option = options[index];
+                  final isSelected = selected == option['key'];
                   return GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectedKey = group['key'];
-                        selectedLabel = group['label'];
-                      });
-                    },
+                    onTap: () =>
+                        setState(() => selected = option['key']),
                     child: Container(
                       margin: const EdgeInsets.only(bottom: 12),
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: selected ? Colors.deepPurple : Colors.grey, width: selected ? 2 : 1),
+                        border: Border.all(
+                          color: isSelected
+                              ? Colors.deepPurple
+                              : Colors.grey,
+                          width: isSelected ? 2 : 1,
+                        ),
                       ),
-                      child: Text(group['label']!, style: const TextStyle(fontSize: 16)),
+                      child: Text(option['label']!),
                     ),
                   );
                 },
@@ -82,14 +102,22 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: selectedKey == null ? null : _continue,
+                onPressed: selected == null ? null : _continue,
                 style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  backgroundColor: selectedKey == null ? Colors.grey.shade50 : Colors.deepPurple,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  backgroundColor: selected == null
+                      ? Colors.grey.shade300
+                      : Colors.deepPurple,
                 ),
                 child: Text(
                   AppStrings.continueText,
-                  style: TextStyle(color: (selectedKey == null) ? Colors.grey.shade500 : Colors.white),
+                  style: TextStyle(
+                    color: selected == null
+                        ? Colors.grey.shade600
+                        : Colors.white,
+                  ),
                 ),
               ),
             ),

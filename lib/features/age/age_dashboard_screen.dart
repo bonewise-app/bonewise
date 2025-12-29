@@ -58,6 +58,7 @@ class AgeDashboardScreen extends StatelessWidget {
         {'key': 'fracture', 'label': AppStrings.fractureEducation},
       ];
     }
+
     return [];
   }
 
@@ -80,16 +81,14 @@ class AgeDashboardScreen extends StatelessWidget {
         child: ListView(
           children: [
             Text(
-              AppStrings.globalDisclaimer,
-              style: const TextStyle(fontSize: 13),
-            ),
-            if (isPediatric) ...[
-              const SizedBox(height: 16),
-              Text(
-                AppStrings.pediatricDisclaimer,
-                style: const TextStyle(fontSize: 13),
+              isPediatric
+                  ? AppStrings.pediatricReminder
+                  : AppStrings.globalDisclaimer,
+              style: const TextStyle(
+                fontSize: 13,
+                color: Colors.grey,
               ),
-            ],
+            ),
             const SizedBox(height: 24),
             ListView.builder(
               shrinkWrap: true,

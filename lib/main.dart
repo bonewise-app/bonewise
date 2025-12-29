@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'features/age/age_selection_screen.dart';
 import 'features/age/age_dashboard_screen.dart';
+import 'app_strings.dart';
 
 void main() {
-  runApp(MyHomePage(),);
+  runApp(const BoneWiseApp());
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key,});
+class BoneWiseApp extends StatefulWidget {
+  const BoneWiseApp({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<BoneWiseApp> createState() => _BoneWiseAppState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _BoneWiseAppState extends State<BoneWiseApp> {
   Widget? homeScreen;
 
   @override
@@ -22,29 +23,26 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     loadInitialScreen();
   }
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: homeScreen ??
-          const Scaffold(
-            body: Center(child: CircularProgressIndicator()),
-          ),
-    );
-  }
 
   Future<void> loadInitialScreen() async {
     final prefs = await SharedPreferences.getInstance();
     final ageKey = prefs.getString('selected_age_key');
     final ageLabel = prefs.getString('selected_age_label');
 
-    if (ageKey == null || ageLabel == null) {
-      homeScreen = const AgeSelectionScreen();
-    } else {
-      homeScreen = AgeDashboardScreen(
-        ageKey: ageKey,
-        ageLabel: ageLabel,
-      );
-    }
-    setState(() {});
+    setState(() {
+      homeScreen = (ageKey == null || ageLabel == null)
+          ? const AgeSelectionScreen()
+          : AgeDashboardScreen(ageKey: ageKey, ageLabel: ageLabel);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: AppStrings.appTitle,
+      // home:AgeSelectionScreen(),
+      home: homeScreen ?? const Scaffold(body: Center(child: CircularProgressIndicator())),
+    );
   }
 }

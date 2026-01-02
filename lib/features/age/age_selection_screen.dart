@@ -1,4 +1,3 @@
-import 'package:bonewise/features/age/pediatric_disclaimer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../app_strings.dart';
@@ -15,59 +14,39 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
   String? selected;
 
   final List<Map<String, String>> options = const [
-    {
-      'key': 'parents',
-      'label': AppStrings.parentsCaregivers,
-    },
-    {
-      'key': '18_30',
-      'label': AppStrings.age_18_30,
-    },
-    {
-      'key': '30_40',
-      'label': AppStrings.age_30_40,
-    },
-    {
-      'key': '40_60',
-      'label': AppStrings.age_40_60,
-    },
-    {
-      'key': '60_plus',
-      'label': AppStrings.age_60_plus,
-    },
+    {'key': '0_1', 'label': AppStrings.ped_0_1},
+    {'key': '1_3', 'label': AppStrings.ped_1_3},
+    {'key': '4_10', 'label': AppStrings.ped_4_10},
+    {'key': '11_18', 'label': AppStrings.ped_11_18},
+    {'key': '18_30', 'label': AppStrings.age_18_30},
+    {'key': '30_40', 'label': AppStrings.age_30_40},
+    {'key': '40_60', 'label': AppStrings.age_40_60},
+    {'key': '60_plus', 'label': AppStrings.age_60_plus},
   ];
 
-  void _continue() async{
-    if (selected == 'parents') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => const PediatricDisclaimerScreen(),
-        ),
-      );
-    } else {
-      final selectedOption =
-      options.firstWhere((e) => e['key'] == selected);
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('selected_age_key', selectedOption['key']!);
-      await prefs.setString('selected_age_label', selectedOption['label']!);
+  Future<void> _continue() async {
+    final selectedOption =
+    options.firstWhere((e) => e['key'] == selected);
 
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => AgeDashboardScreen(
-            ageKey: selectedOption['key']!,
-            ageLabel: selectedOption['label']!,
-          ),
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('selected_age_key', selectedOption['key']!);
+    await prefs.setString('selected_age_label', selectedOption['label']!);
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => AgeDashboardScreen(
+          ageKey: selectedOption['key']!,
+          ageLabel: selectedOption['label']!,
         ),
-      );
-    }
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.selectAgeTitle)),
+      appBar: AppBar(leadingWidth: 30,title: Text(AppStrings.selectAgeTitle,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),)),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -78,6 +57,7 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                 itemBuilder: (_, index) {
                   final option = options[index];
                   final isSelected = selected == option['key'];
+
                   return GestureDetector(
                     onTap: () =>
                         setState(() => selected = option['key']),

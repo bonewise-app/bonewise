@@ -1,3 +1,4 @@
+import 'package:bonewise/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'features/age/age_selection_screen.dart';
@@ -26,13 +27,22 @@ class _BoneWiseAppState extends State<BoneWiseApp> {
 
   Future<void> loadInitialScreen() async {
     final prefs = await SharedPreferences.getInstance();
+
+    final seenSplash = prefs.getBool('seen_splash') ?? false;
     final ageKey = prefs.getString('selected_age_key');
     final ageLabel = prefs.getString('selected_age_label');
 
     setState(() {
-      homeScreen = (ageKey == null || ageLabel == null)
-          ? const AgeSelectionScreen()
-          : AgeDashboardScreen(ageKey: ageKey, ageLabel: ageLabel);
+      if (!seenSplash) {
+        homeScreen = const SplashScreen();
+      } else if (ageKey == null || ageLabel == null) {
+        homeScreen = const AgeSelectionScreen();
+      } else {
+        homeScreen = AgeDashboardScreen(
+          ageKey: ageKey,
+          ageLabel: ageLabel,
+        );
+      }
     });
   }
 
@@ -41,8 +51,11 @@ class _BoneWiseAppState extends State<BoneWiseApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
-      // home:AgeSelectionScreen(),
-      home: homeScreen ?? const Scaffold(body: Center(child: CircularProgressIndicator())),
+      home: SplashScreen(),
+      // home: homeScreen ??
+      //     const Scaffold(
+      //       body: Center(child: CircularProgressIndicator()),
+      //     ),
     );
   }
 }

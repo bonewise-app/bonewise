@@ -20,37 +20,37 @@ class EmergencyGuidanceScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
-              "What to do immediately",
+              AppStrings.whatToDoImmediately,
               style: TextStyle(fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 8),
-            Text("• Placeholder\n• Placeholder"),
+            SizedBox(height: 6),
+            Text("• keep still \n• avoid movement \n• ensure safety \n• reassure"),
 
             SizedBox(height: 16),
             Text(
-              "What NOT to do",
+              AppStrings.whatNotToDo,
               style: TextStyle(fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 8),
-            Text("• Placeholder\n• Placeholder"),
+            SizedBox(height: 6),
+            Text("• no realignment \n• no massage \n• no force \n• don’t ignore worsening symptoms"),
 
             SizedBox(height: 16),
             Text(
-              "When to seek medical care",
+              AppStrings.whenSeekMedicalCare,
               style: TextStyle(fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 8),
-            Text("• Placeholder"),
-
-            Spacer(),
-
-            Text(
-              AppStrings.emergencyDisclaimer,
-              style: TextStyle(fontSize: 12, color: Colors.grey),
-            ),
+            SizedBox(height: 6),
+            Text("• severe pain \n• deformity \n• numbness \n• open wounds \n• injury after fall/trauma"),
           ],
         ),
       )),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Text(
+          AppStrings.emergencyDisclaimer,
+          style: TextStyle(fontSize: 12, color: Colors.grey),
+        ),
+      ),
     );
   }
 }

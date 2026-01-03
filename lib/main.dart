@@ -51,11 +51,11 @@ class _BoneWiseAppState extends State<BoneWiseApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
-      home: SplashScreen(),
-      // home: homeScreen ??
-      //     const Scaffold(
-      //       body: Center(child: CircularProgressIndicator()),
-      //     ),
+      // home: SplashScreen(),
+      home: homeScreen ??
+          const Scaffold(
+            body: Center(child: CircularProgressIndicator()),
+          ),
     );
   }
 }

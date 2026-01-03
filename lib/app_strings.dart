@@ -23,7 +23,53 @@ class AppStrings {
   static const lifestylePrevention = 'Lifestyle & Prevention';
   static const emergencyGuidance = 'Emergency Guidance';
 
+  /// Emergency Guidance
   static const boneHealthFor = 'Bone Health for';
+  static const whatToDoImmediately = 'What to do immediately';
+  static const whatNotToDo = 'What NOT to do';
+  static const whenSeekMedicalCare = 'When to seek medical care';
+
+  /// Fracture Awareness
+  static const exploreByBodyRegion = 'Explore by Body Region';
+  static const generalFractureEducation = 'General Fracture Education';
+  static const redFlags = 'Red Flags';
+  static const fractureRegions = 'Fracture Regions';
+  static const fractureRegionHead = 'Head';
+  static const fractureRegionUpperLimb = 'Upper Limb';
+  static const fractureRegionLowerLimb = 'Lower Limb';
+  static const fractureRegionTrunk = 'Trunk';
+
+  /// Head
+  static const fractureRegionSkull = 'Skull';
+  static const fractureRegionFace = 'Face';
+
+  /// Upper Limb
+  static const fractureRegionShoulder = 'Shoulder';
+  static const fractureRegionArm = 'Arm';
+  static const fractureRegionElbow = 'Elbow';
+  static const fractureRegionForearm = 'Forearm';
+  static const fractureRegionWrist = 'Wrist';
+  static const fractureRegionHand = 'Hand';
+
+  /// Lower Limb
+  static const fractureRegionHip = 'Hip';
+  static const fractureRegionThigh = 'Thigh';
+  static const fractureRegionKnee = 'Knee';
+  static const fractureRegionLeg = 'Leg';
+  static const fractureRegionAnkle = 'Ankle';
+  static const fractureRegionFoot = 'Foot';
+
+  /// Trunk
+  static const fractureRegionSpine = 'Spine';
+  static const fractureRegionPelvis = 'Pelvis';
+  static const fractureRegionRibs = 'Ribs';
+
+  /// Fracture Details
+  static const whatThisFractureMeans = 'What this fracture means';
+  static const howItCommonlyHappens = 'How it commonly happens';
+  static const commonSymptomsPeopleNotice = 'Common symptoms people notice';
+  static const whyMedicalEvaluationIsImportant = 'Why medical evaluation is important';
+  static const urgentMedicalCare = 'Red flags requiring urgent medical care';
 
   /// Disclaimers
   static const shortDisclaimer =

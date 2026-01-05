@@ -1,5 +1,5 @@
+import 'package:bonewise/app_strings.dart';
 import 'package:flutter/material.dart';
-import '../../app_strings.dart';
 
 class FractureDetailScreen extends StatelessWidget {
   final String title;
@@ -9,7 +9,14 @@ class FractureDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(leadingWidth: 30,title: Text(title,style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20)),backgroundColor: Colors.white,),
+      appBar: AppBar(
+        leadingWidth: 30,
+        backgroundColor: Colors.white,
+        title: Text(
+          title,
+          style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: ListView(
@@ -48,27 +55,49 @@ class FractureDetailScreen extends StatelessWidget {
             ),
             SizedBox(height: 6),
             Text(
-              "Proper assessment helps identify the injury and prevents complications.",
+              "Proper assessment helps identify the injury and reduces the risk of complications.",
             ),
 
             SizedBox(height: 16),
             Text(
-              AppStrings.urgentMedicalCare,
+              AppStrings.possibleOutcomeOfFracture,
               style: TextStyle(fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 6),
             Text(
-              "• Severe pain\n• Deformity\n• Numbness\n• Inability to move the limb",
+              "• Pain or stiffness may persist\n"
+                  "• Temporary limitation of movement\n"
+                  "• Healing may vary between individuals\n"
+                  "• Follow-up care may be required",
             ),
 
+            SizedBox(height: 16),
+            Text(
+              AppStrings.generalExpectations,
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            SizedBox(height: 6),
+            Text(
+              "Recovery experiences can vary depending on the fracture and individual factors.",
+            ),
+
+            SizedBox(height: 16),
+            Text(
+              "Red flags requiring urgent medical care",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            SizedBox(height: 6),
+            Text(
+              "• Severe pain\n• Visible deformity\n• Numbness\n• Inability to move the affected area",
+            ),
           ],
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.only(left: 16,right: 16,bottom: 16),
         child: Text(
           AppStrings.emergencyDisclaimer,
-          style: TextStyle(fontSize: 12, color: Colors.grey),
+          style: const TextStyle(fontSize: 12, color: Colors.grey),
         ),
       ),
     );

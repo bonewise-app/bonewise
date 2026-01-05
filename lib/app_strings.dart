@@ -28,6 +28,8 @@ class AppStrings {
   static const whatToDoImmediately = 'What to do immediately';
   static const whatNotToDo = 'What NOT to do';
   static const whenSeekMedicalCare = 'When to seek medical care';
+  static const possibleOutcomeOfFracture = 'POSSIBLE OUTCOME OF FRACTURE';
+  static const generalExpectations = 'General expectations';
 
   /// Fracture Awareness
   static const exploreByBodyRegion = 'Explore by Body Region';
@@ -62,7 +64,7 @@ class AppStrings {
   /// Trunk
   static const fractureRegionSpine = 'Spine';
   static const fractureRegionPelvis = 'Pelvis';
-  static const fractureRegionRibs = 'Ribs';
+  static const chestWall = 'Chest Wall';
 
   /// Fracture Details
   static const whatThisFractureMeans = 'What this fracture means';
@@ -70,6 +72,104 @@ class AppStrings {
   static const commonSymptomsPeopleNotice = 'Common symptoms people notice';
   static const whyMedicalEvaluationIsImportant = 'Why medical evaluation is important';
   static const urgentMedicalCare = 'Red flags requiring urgent medical care';
+
+  /// Skull
+  static const skullFracture = 'Skull fracture';
+
+  /// Face
+  static const nasalBoneFracture = 'Nasal bone fracture';
+  static const zygomaticFracture = 'Zygomatic fracture';
+  static const maxillaFracture = 'Maxilla fracture';
+  static const mandleFracture = 'Mandible fracture';
+  static const orbitalFracture = 'Orbital fracture';
+
+  /// Shoulder
+  static const clavicleShaftFracture = 'Clavicle shaft fracture';
+  static const lateralEndClavicleFracture = 'Lateral end clavicle fracture';
+  static const proximalHumerusFracture = 'Proximal humerus fracture';
+  static const scapulaFracture = 'Scapula fracture';
+  static const shoulderDislocation = 'Shoulder dislocation';
+
+  /// Arm
+  static const humerusShaftFracture = 'Humerus shaft fracture';
+
+  /// Elbow
+  static const distalHumerusFracture = 'Distal humerus fracture';
+  static const radialHeadFracture = 'Radial head fracture';
+  static const radialNeckFracture = 'Radial neck fracture';
+  static const olecranonFracture = 'Olecranon fracture';
+  static const coronoidFracture = 'Coronoid fracture';
+  static const terribleTriadOfElbow = 'Terrible triad of elbow (awareness)';
+  static const elbowDislocation = 'Elbow dislocation';
+
+  /// Forearm
+  static const radiusShaftFracture = 'Radius shaft fracture';
+  static const ulnaShaftFracture = 'Ulna shaft fracture';
+  static const bothBoneForearmFracture = 'Both bone forearm fracture';
+
+  /// Wrist
+  static const distalRadiusFracture = 'Distal radius fracture';
+  static const distalUlnaFracture = 'Distal ulna fracture';
+  static const carpalFractures = 'Carpal fractures (scaphoid emphasis)';
+
+  /// Hand
+  static const phalangealFractures = 'Phalangeal fractures (thumb + fingers)';
+  static const metacarpalFractures = 'Metacarpal fractures';
+
+  /// Hip
+  static const femoralHeadFracture = 'Femoral head fracture';
+  static const femoralNeckFracture = 'Femoral neck fracture';
+  static const intertrochantericFemurFracture = 'Intertrochanteric femur fracture';
+  static const subtrochantericFemurFracture = 'Subtrochanteric femur fracture';
+  static const hipDislocation = 'Hip dislocation';
+
+  /// Thigh
+  static const femurShaftFracture = 'Femur shaft fracture';
+
+  /// Knee
+  static const distalFemurFracture = 'Distal femur fracture';
+  static const patellaFracture = 'Patella fracture';
+  static const proximalTibiaFracture = 'Proximal tibia fracture';
+  static const proximalFibulaFracture = 'Proximal fibula fracture';
+  static const kneeDislocation = 'Knee dislocation';
+
+  /// Leg
+  static const tibiaShaftFracture = 'Tibia shaft fracture';
+  static const fibulaShaftFracture = 'Fibula shaft fracture';
+
+  /// Ankle
+  static const distalTibiaFracture = 'Distal tibia fracture';
+  static const lateralMalleolusFracture = 'Lateral malleolus fracture';
+  static const medialMalleolusFracture = 'Medial malleolus fracture';
+  static const bimalleolarFracture = 'Bimalleolar fracture';
+  static const trimalleolarFracture = 'Trimalleolar fracture';
+  static const talusFracture = 'Talus fracture';
+  static const ankleDislocation = 'Ankle dislocation';
+
+  /// Foot
+  static const calcaneumFracture = 'Calcaneum fracture';
+  static const chopartFracture = 'Chopart fracture-dislocation';
+  static const navicularFracture = 'Navicular fracture';
+  static const cuboidFracture = 'Cuboid fracture';
+  static const lisfrancFracture = 'Lisfranc fracture-dislocation';
+  static const jonesFracture = 'Jones fracture';
+  static const metatarsalFractures = 'Metatarsal fractures';
+  static const phalanxFractures = 'Phalangeal (toe) fractures';
+
+  /// Spine
+  static const cervicalSpineFracture = 'Cervical spine fracture';
+  static const thoracicSpineFracture = 'Thoracic spine fracture';
+  static const lumbarSpineFracture = 'Lumbar spine fracture';
+  static const sacralFracture = 'Sacral fracture';
+  static const coccyxFracture = 'Coccyx fracture';
+
+  /// Pelvis
+  static const pelvicRingFracture = 'Pelvic ring fracture';
+  static const acetabularFracture = 'Acetabular fracture';
+  static const pubicRamiFracture = 'Pubic rami fracture';
+
+  /// Chest Wall
+  static const ribFracture = 'Rib fracture';
 
   /// Disclaimers
   static const shortDisclaimer =

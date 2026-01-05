@@ -1,5 +1,5 @@
 import 'package:bonewise/app_strings.dart';
-import 'package:bonewise/features/fracture/fracture_detail_screen.dart';
+import 'package:bonewise/features/fracture/fracture_subregion_screen.dart';
 import 'package:flutter/material.dart';
 
 class FractureRegionScreen extends StatelessWidget {
@@ -12,11 +12,25 @@ class FractureRegionScreen extends StatelessWidget {
       case "Head":
         return [AppStrings.fractureRegionSkull, AppStrings.fractureRegionFace];
       case "Upper Limb":
-        return [AppStrings.fractureRegionShoulder, AppStrings.fractureRegionArm, AppStrings.fractureRegionElbow, AppStrings.fractureRegionForearm, AppStrings.fractureRegionWrist, AppStrings.fractureRegionWrist];
+        return [
+          AppStrings.fractureRegionShoulder,
+          AppStrings.fractureRegionArm,
+          AppStrings.fractureRegionElbow,
+          AppStrings.fractureRegionForearm,
+          AppStrings.fractureRegionWrist,
+          AppStrings.fractureRegionHand,
+        ];
       case "Lower Limb":
-        return [AppStrings.fractureRegionHip, AppStrings.fractureRegionThigh, AppStrings.fractureRegionKnee, AppStrings.fractureRegionLeg, AppStrings.fractureRegionAnkle, AppStrings.fractureRegionFoot];
+        return [
+          AppStrings.fractureRegionHip,
+          AppStrings.fractureRegionThigh,
+          AppStrings.fractureRegionKnee,
+          AppStrings.fractureRegionLeg,
+          AppStrings.fractureRegionAnkle,
+          AppStrings.fractureRegionFoot,
+        ];
       case "Trunk":
-        return [AppStrings.fractureRegionSpine, AppStrings.fractureRegionPelvis, AppStrings.fractureRegionRibs];
+        return [AppStrings.fractureRegionSpine, AppStrings.fractureRegionPelvis, AppStrings.chestWall];
       default:
         return [];
     }
@@ -43,7 +57,9 @@ class FractureRegionScreen extends StatelessWidget {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (_) => FractureDetailScreen(title: subRegions[index])),
+                  MaterialPageRoute(
+                    builder: (_) => FractureSubRegionScreen(region: region, subRegion: subRegions[index]),
+                  ),
                 );
               },
               child: Container(

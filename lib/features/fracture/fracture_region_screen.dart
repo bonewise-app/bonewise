@@ -55,7 +55,7 @@ class FractureRegionScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 6.0),
             child: InkWell(
               onTap: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (_) => FractureSubRegionScreen(region: region, subRegion: subRegions[index]),

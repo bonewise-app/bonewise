@@ -180,7 +180,7 @@ class FractureSubRegionScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 6.0),
             child: InkWell(
               onTap: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => FractureDetailScreen(title: fractures[index])),
                 );

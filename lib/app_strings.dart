@@ -23,6 +23,41 @@ class AppStrings {
   static const lifestylePrevention = 'Lifestyle & Prevention';
   static const emergencyGuidance = 'Emergency Guidance';
 
+  /// Movement & Recovery
+  static const movementRecovery ='Movement & Recovery';
+  static const whyMovementMatters = 'Why Movement Matters';
+  static const earlyRecoveryUnderstanding = 'Early Recovery Understanding';
+  static const returningToDailyActivities = 'Returning to Daily Activities';
+  static const confidenceAndFear = 'Confidence & Fear of Movement';
+  static const longTermBoneCare = 'Long-Term Bone & Joint Care';
+  static const safetyAndRedFlags = 'Safety & Red Flags';
+
+  static const sprint4Footer =
+      'Recovery experiences vary between individuals.\n'
+      'Always follow advice given by your treating doctor or physiotherapist.';
+
+  static const sprint4EmergencyFooter =
+      'If you experience severe pain, sudden deformity, or inability to move,\n'
+      'seek immediate medical care or visit the nearest emergency facility.\n'
+      'BoneWise does not provide emergency medical services.';
+
+  static const mediumDisc =
+      'This information is for educational purposes only and does not replace professional medical advice.';
+
+  /// Nutrition & Bone Health
+  static const nutritionBoneHealth = 'Nutrition & Bone Health';
+  static const whyNutritionMatters = 'Why Nutrition Matters for Bones';
+  static const calciumBones = 'Calcium and Your Bones';
+  static const vitaminDBones = 'Vitamin D and Bone Health';
+  static const foodsForBones = 'Foods That Support Healthy Bones';
+  static const nutritionMyths = 'Bone Nutrition Myths';
+  static const consultDoctor = 'When Should You Consult a Doctor?';
+
+  static const ageChildren = 'Children';
+  static const ageAdolescents = 'Adolescents';
+  static const ageAdults = 'Adults';
+  static const ageOlderAdults = 'Older adults';
+
   /// Emergency Guidance
   static const boneHealthFor = 'Bone Health for';
   static const whatToDoImmediately = 'What to do immediately';

@@ -45,7 +45,7 @@ class FractureAwarenessHomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 6.0),
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => FractureRegionScreen(region: regions[index])),
                     );

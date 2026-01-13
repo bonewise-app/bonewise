@@ -1,5 +1,6 @@
 import 'package:bonewise/app_strings.dart';
 import 'package:bonewise/features/fracture/fracture_awareness_home_screen.dart';
+import 'package:bonewise/features/life_style/lifestyle_prevention_screen.dart';
 import 'package:bonewise/features/modules/emergency_guidance_screen.dart';
 import 'package:bonewise/features/modules/module_screen.dart';
 import 'package:flutter/material.dart';
@@ -46,6 +47,11 @@ class AgeDashboardScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (_) => const FractureAwarenessHomeScreen()),
+                      );
+                    }else if (modules[index] == AppStrings.lifestylePrevention) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const LifestylePreventionScreen()),
                       );
                     }
                     else{

@@ -49,59 +49,63 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
       appBar: AppBar(leadingWidth: 30,title: Text(AppStrings.selectAgeTitle,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),)),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                itemCount: options.length,
-                itemBuilder: (_, index) {
-                  final option = options[index];
-                  final isSelected = selected == option['key'];
+        child: SafeArea(
+          top: false,
+          bottom: true,
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: options.length,
+                  itemBuilder: (_, index) {
+                    final option = options[index];
+                    final isSelected = selected == option['key'];
 
-                  return GestureDetector(
-                    onTap: () =>
-                        setState(() => selected = option['key']),
-                    child: Container(
-                      margin: const EdgeInsets.only(bottom: 12),
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: isSelected
-                              ? Colors.deepPurple
-                              : Colors.grey,
-                          width: isSelected ? 2 : 1,
+                    return GestureDetector(
+                      onTap: () =>
+                          setState(() => selected = option['key']),
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 12),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: isSelected
+                                ? Colors.deepPurple
+                                : Colors.grey,
+                            width: isSelected ? 2 : 1,
+                          ),
                         ),
+                        child: Text(option['label']!),
                       ),
-                      child: Text(option['label']!),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: selected == null ? null : _continue,
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                  );
-                },
-              ),
-            ),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: selected == null ? null : _continue,
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    backgroundColor: selected == null
+                        ? Colors.grey.shade300
+                        : Colors.deepPurple,
                   ),
-                  backgroundColor: selected == null
-                      ? Colors.grey.shade300
-                      : Colors.deepPurple,
-                ),
-                child: Text(
-                  AppStrings.continueText,
-                  style: TextStyle(
-                    color: selected == null
-                        ? Colors.grey.shade600
-                        : Colors.white,
+                  child: Text(
+                    AppStrings.continueText,
+                    style: TextStyle(
+                      color: selected == null
+                          ? Colors.grey.shade600
+                          : Colors.white,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

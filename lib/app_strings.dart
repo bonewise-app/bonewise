@@ -3,6 +3,7 @@ class AppStrings {
 
   static const selectAgeTitle = 'Select Age Group';
   static const continueText = 'Continue';
+  static const backText = 'Back';
 
   /// Main options
   static const parentsCaregivers = 'For Parents & Caregivers (0–18 years)';
@@ -24,7 +25,7 @@ class AppStrings {
   static const emergencyGuidance = 'Emergency Guidance';
 
   /// Movement & Recovery
-  static const movementRecovery ='Movement & Recovery';
+  static const movementRecovery = 'Movement & Recovery';
   static const whyMovementMatters = 'Why Movement Matters';
   static const earlyRecoveryUnderstanding = 'Early Recovery Understanding';
   static const returningToDailyActivities = 'Returning to Daily Activities';
@@ -222,4 +223,69 @@ class AppStrings {
 
   static const String emergencyDisclaimer =
       "Emergency Notice: This information is for general awareness only and does not replace emergency medical care. If you suspect a fracture or serious injury, seek immediate medical attention.";
+
+  /// ENTRY DISCLAIMER
+  static const entryDisclaimer = 'DISCLAIMER';
+
+  /// Questions & Answers
+  static const questionnaireDisclaimer =
+      'This questionnaire is for education and awareness only. It does not diagnose any condition or replace medical advice.';
+
+  /// Questionnaire
+  static const boneHealthQuestionnaire = 'Bone Health Awareness Questionnaire';
+  static const question = 'Question';
+
+  /// Answers
+  static const yes = 'Yes';
+  static const no = 'No';
+  static const notSure = 'Not sure';
+  static const sometimes = 'Sometimes';
+
+  /// Result texts
+  static const result = 'Result';
+  static const result1 =
+      'Your responses suggest that you are aware of several factors that support bone health.\n'
+      'Continuing healthy habits and staying informed can help maintain bone strength over time.';
+
+  static const result2 =
+      'Some of your responses suggest areas where learning more about bone health could be helpful.\n'
+      'Small changes in awareness and habits can make a meaningful difference.';
+
+  static const result3 =
+      'Certain responses relate to bone health factors that are best discussed with a doctor,\n'
+      'especially if they persist or affect daily life.';
+
+  static const resultFooter =
+      'This information is for educational purposes only and does not replace consultation with a qualified medical professional.';
+
+  static const que1 = 'Is regular physical movement part of the daily routine?';
+  static const que2 =
+      'Does the day include activities that involve standing, walking, or moving rather than sitting most of the time?';
+  static const que3 = 'Is there an understanding that physical activity supports bone strength at all ages?';
+  static const que4 = 'Have there been extended periods recently when physical movement was very limited (for example due to illness, injury, or lifestyle)?';
+  static const que5 =
+      'Is physical activity generally adjusted safely according to age and comfort rather than avoided completely?';
+  static const que6 = 'Is there an awareness that certain everyday foods support bone health?';
+  static const que7 = 'Are calcium-rich foods included in regular meals or snacks?';
+  static const que8 = 'Is there an understanding that vitamin D plays a role in bone health?';
+  static const que9 = 'Are natural food sources of vitamin D or fortified foods part of the usual diet?';
+  static const que10 = 'Is nutrition for bone health considered across different life stages (childhood, adulthood, older age)?';
+  static const que11 = 'Have there been long periods when diet quality was poor or meals were frequently skipped?';
+  static const que12 = 'Is there an awareness that sunlight exposure plays a role in supporting bone health?';
+  static const que13 = 'Is spending some time outdoors during daylight hours part of the usual routine?';
+  static const que14 = 'Are there regular lifestyle factors (indoor work, school, limited outdoor activity) that reduce sunlight exposure?';
+  static const que15 = 'Is there an understanding that vitamin D can come from both sunlight and certain foods?';
+  static const que16 = 'Do seasonal changes or daily routines significantly affect time spent in sunlight?';
+  static const que17 = 'Has sunlight exposure been consciously avoided for long periods due to routine, climate, or personal habits?';
+  static const que18 = 'Have there been any falls or injuries in the recent or past period, even if no major harm was noticed?';
+  static const que19 = 'Have repeated falls or minor injuries occurred over time?';
+  static const que20 = 'Has fear of falling or getting injured limited daily movement or activity?';
+  static const que21 = 'Were medical evaluations sought after significant falls or injuries when they occurred?';
+  static const que22 = 'Is there an awareness that falls and injuries can affect bone health, especially as age increases?';
+  static const que23 = 'Is there awareness that repeated falls or injuries should be discussed with a doctor, even if they seem minor?';
+  static const que24 = 'Have pain, stiffness, or difficulty in movement ever lasted long enough to interfere with daily activities?';
+  static const que25 = 'Has there been any noticeable change in posture, balance, or walking pattern over time?';
+  static const que26 = 'Is there an understanding that fractures occurring after minor falls deserve medical attention?';
+  static const que27 = 'Have there been situations where bone or joint discomfort was ignored because it seemed manageable at the time?';
+  static const que28= 'Is there awareness that some bone- or joint-related symptoms should not be ignored and may need medical discussion if they persist?';
 }

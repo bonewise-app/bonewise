@@ -4,6 +4,7 @@ import 'package:bonewise/features/life_style/lifestyle_prevention_screen.dart';
 import 'package:bonewise/features/modules/emergency_guidance_screen.dart';
 import 'package:bonewise/features/modules/module_screen.dart';
 import 'package:bonewise/features/questions_answers/questionnaire_entry_screen.dart';
+import 'package:bonewise/features/utilities/utilities_home_screen.dart';
 import 'package:flutter/material.dart';
 
 class AgeDashboardScreen extends StatelessWidget {
@@ -18,6 +19,7 @@ class AgeDashboardScreen extends StatelessWidget {
     AppStrings.lifestylePrevention,
     AppStrings.emergencyGuidance,
     AppStrings.boneHealthQuestionnaire,
+    AppStrings.utilities,
   ];
 
   @override
@@ -60,6 +62,13 @@ class AgeDashboardScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (_) => const QuestionnaireEntryScreen(),
+                        ),
+                      );
+                    }else if (modules[index] == AppStrings.utilities) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const UtilitiesHomeScreen(),
                         ),
                       );
                     }

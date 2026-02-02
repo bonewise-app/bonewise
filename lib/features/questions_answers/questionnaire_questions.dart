@@ -51,3 +51,46 @@ final questions = <Question>[
   Question(text: AppStrings.que27, allowSometimes: true, isRedFlag: true),
   Question(text: AppStrings.que28, allowSometimes: false, isRedFlag: false),
 ];
+
+
+
+class QuestionSection {
+  final String title;
+  final int start;
+  final int end;
+
+  QuestionSection({
+    required this.title,
+    required this.start,
+    required this.end,
+  });
+}
+
+final List<QuestionSection> questionnaireSections = [
+  QuestionSection(
+    title: AppStrings.section1Title,
+    start: 0,
+    end: 4,
+  ),
+  QuestionSection(
+    title: AppStrings.section2Title,
+    start: 5,
+    end: 10,
+  ),
+  QuestionSection(
+    title: AppStrings.section3Title,
+
+    start: 11,
+    end: 16,
+  ),
+  QuestionSection(
+    title: AppStrings.section4Title,
+    start: 17,
+    end: 21,
+  ),
+  QuestionSection(
+    title: AppStrings.section5Title,
+    start: 22,
+    end: 27,
+  ),
+];

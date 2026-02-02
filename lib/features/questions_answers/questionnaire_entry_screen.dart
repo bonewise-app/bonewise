@@ -13,7 +13,13 @@ class QuestionnaireEntryScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leadingWidth: 30,
-        title: Text(AppStrings.entryDisclaimer, style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 20)),
+        title: Text(
+          AppStrings.entryDisclaimer,
+          style: const TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 20,
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -23,9 +29,7 @@ class QuestionnaireEntryScreen extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: Text(
-                  AppStrings.questionnaireDisclaimer,
-                ),
+                child: Text(AppStrings.questionnaireDisclaimer),
               ),
               SizedBox(
                 width: double.infinity,
@@ -34,7 +38,9 @@ class QuestionnaireEntryScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const QuestionnaireScreen(),
+                        builder: (_) => const QuestionnaireScreen(
+                          showFirstSectionIntro: true,
+                        ),
                       ),
                     );
                   },
@@ -44,11 +50,9 @@ class QuestionnaireEntryScreen extends StatelessWidget {
                     ),
                     backgroundColor: Colors.deepPurple,
                   ),
-                  child: Text(
+                  child: const Text(
                     AppStrings.continueText,
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),

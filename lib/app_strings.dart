@@ -258,34 +258,178 @@ class AppStrings {
   static const resultFooter =
       'This information is for educational purposes only and does not replace consultation with a qualified medical professional.';
 
+  static const section1Title = 'Lifestyle & Physical Activity Awareness\n(5 Questions)';
+  static const section2Title = 'Nutrition Awareness (Bone Health Context)\n(6 Questions)';
+  static const section3Title = 'Sunlight & Vitamin D Awareness\n(6 Questions)';
+  static const section4Title = 'Injury, Falls & Fracture Awareness\n(5 Questions)';
+  static const section5Title = 'Bone Health Red-Flag Awareness\n(6 Questions)';
+
   static const que1 = 'Is regular physical movement part of the daily routine?';
   static const que2 =
       'Does the day include activities that involve standing, walking, or moving rather than sitting most of the time?';
   static const que3 = 'Is there an understanding that physical activity supports bone strength at all ages?';
-  static const que4 = 'Have there been extended periods recently when physical movement was very limited (for example due to illness, injury, or lifestyle)?';
+  static const que4 =
+      'Have there been extended periods recently when physical movement was very limited (for example due to illness, injury, or lifestyle)?';
   static const que5 =
       'Is physical activity generally adjusted safely according to age and comfort rather than avoided completely?';
   static const que6 = 'Is there an awareness that certain everyday foods support bone health?';
   static const que7 = 'Are calcium-rich foods included in regular meals or snacks?';
   static const que8 = 'Is there an understanding that vitamin D plays a role in bone health?';
   static const que9 = 'Are natural food sources of vitamin D or fortified foods part of the usual diet?';
-  static const que10 = 'Is nutrition for bone health considered across different life stages (childhood, adulthood, older age)?';
+  static const que10 =
+      'Is nutrition for bone health considered across different life stages (childhood, adulthood, older age)?';
   static const que11 = 'Have there been long periods when diet quality was poor or meals were frequently skipped?';
   static const que12 = 'Is there an awareness that sunlight exposure plays a role in supporting bone health?';
   static const que13 = 'Is spending some time outdoors during daylight hours part of the usual routine?';
-  static const que14 = 'Are there regular lifestyle factors (indoor work, school, limited outdoor activity) that reduce sunlight exposure?';
+  static const que14 =
+      'Are there regular lifestyle factors (indoor work, school, limited outdoor activity) that reduce sunlight exposure?';
   static const que15 = 'Is there an understanding that vitamin D can come from both sunlight and certain foods?';
   static const que16 = 'Do seasonal changes or daily routines significantly affect time spent in sunlight?';
-  static const que17 = 'Has sunlight exposure been consciously avoided for long periods due to routine, climate, or personal habits?';
-  static const que18 = 'Have there been any falls or injuries in the recent or past period, even if no major harm was noticed?';
+  static const que17 =
+      'Has sunlight exposure been consciously avoided for long periods due to routine, climate, or personal habits?';
+  static const que18 =
+      'Have there been any falls or injuries in the recent or past period, even if no major harm was noticed?';
   static const que19 = 'Have repeated falls or minor injuries occurred over time?';
   static const que20 = 'Has fear of falling or getting injured limited daily movement or activity?';
   static const que21 = 'Were medical evaluations sought after significant falls or injuries when they occurred?';
-  static const que22 = 'Is there an awareness that falls and injuries can affect bone health, especially as age increases?';
-  static const que23 = 'Is there awareness that repeated falls or injuries should be discussed with a doctor, even if they seem minor?';
-  static const que24 = 'Have pain, stiffness, or difficulty in movement ever lasted long enough to interfere with daily activities?';
+  static const que22 =
+      'Is there an awareness that falls and injuries can affect bone health, especially as age increases?';
+  static const que23 =
+      'Is there awareness that repeated falls or injuries should be discussed with a doctor, even if they seem minor?';
+  static const que24 =
+      'Have pain, stiffness, or difficulty in movement ever lasted long enough to interfere with daily activities?';
   static const que25 = 'Has there been any noticeable change in posture, balance, or walking pattern over time?';
-  static const que26 = 'Is there an understanding that fractures occurring after minor falls deserve medical attention?';
-  static const que27 = 'Have there been situations where bone or joint discomfort was ignored because it seemed manageable at the time?';
-  static const que28= 'Is there awareness that some bone- or joint-related symptoms should not be ignored and may need medical discussion if they persist?';
+  static const que26 =
+      'Is there an understanding that fractures occurring after minor falls deserve medical attention?';
+  static const que27 =
+      'Have there been situations where bone or joint discomfort was ignored because it seemed manageable at the time?';
+  static const que28 =
+      'Is there awareness that some bone- or joint-related symptoms should not be ignored and may need medical discussion if they persist?';
+
+  static const utilities = 'Utilities';
+  static const importantNote = 'IMPORTANT NOTE:';
+  static const purpose = 'PURPOSE:';
+
+  static const howToUseTitle = 'How to Use BoneWise';
+  static const howToUseTitleBoneWiseEducationalApp = '''BoneWise is an educational app designed to help users understand bone health, fracture awareness, safety, and warning signs that may need medical attention.
+
+The information provided is general, simple, and meant for learning only.''';
+  static const howToUseTitlePoints = '''• A diagnosis tool
+• A treatment guide
+• A replacement for a doctor
+• A medical decision-making app''';
+
+  static const howToUseBWNotPoints = '''• Tell users what condition they have
+• Suggest medicines, supplements, or exercises
+• Decide whether surgery is needed''';
+
+  static const howToUseAgeBasedSections = '''BoneWise uses age-based sections so information feels relevant and easier to understand.
+Some age groups are written for caregivers or parents.
+Some age groups are written directly for adults.
+Age-based content does NOT mean medical advice for that age''';
+
+  static const howToUseModules = '''1. Bone Health Basics
+2. Fracture Awareness
+3. Lifestyle & Prevention
+4. Emergency Guidance''';
+
+  static const howToUseUtilitiesExist = '''Utilities exist to support understanding.
+They explain terms, show visuals, highlight warning signs, clear myths, and explain how to use the app safely.
+Utilities are optional.''';
+
+  static const boneWiseIsNOT = "BoneWise is NOT:";
+  static const boneWiseDoesNOT = "BoneWise does NOT:";
+  static const usersAreAdvised = "Users are advised to consult a qualified doctor for personal medical concerns.";
+  static const ageGroups = "AGE GROUPS:";
+  static const modules = "MODULES:";
+  static const allAgeGroupsDisplay = "All age groups display the same four modules in the same order:";
+  static const utilitiesSection = "UTILITIES SECTION:";
+
+
+  static const globalUtilityFooter =
+      'This app is for educational purposes only. It does not replace professional medical consultation, diagnosis, or treatment.';
+
+  static const simpleExplanationsTitle = 'Simple Explanations';
+  static const visualGuides = 'Visual Guides';
+  static const explainCommonBone = 'To explain common bone and fracture-related terms in plain language.';
+  static const theseExplanationsDescribe = 'These explanations describe terms only. Understanding a term does not replace medical evaluation';
+
+  static const basicBoneAnatomy = "1. Basic Bone Anatomy";
+  static const commonFractureLocations = "2. Common Fracture Locations";
+  static const fractureCanHappen = "3. How a Fracture Can Happen";
+  static const boneSoftTissue = "4. Bone vs Soft Tissue";
+
+  static const visualFooter =
+      'Illustrations are for general understanding only. They do not represent a diagnosis or treatment plan.';
+
+  static const boneDef = '• Bone';
+  static const fractureDef = '• Fracture';
+  static const displaced = '• Displaced';
+  static const nonDisplaced = '• Non-displaced';
+  static const hairlineFracture = '• Hairline Fracture';
+  static const softTissue = '• Soft Tissue';
+  static const ligament = '• Ligament';
+  static const joint = '• Joint';
+  static const boneDensity = '• Bone Density';
+
+  static const boneDefDesc =
+      'A hard structure that supports movement, protects organs, and changes over time. Bones are living tissue.';
+  static const fractureDefDesc =
+      'A break or crack in a bone. Fractures can happen due to injury, force, or weakened bones.';
+  static const displacedDesc =
+      'A fracture where broken bone pieces are not in their normal position. This describes position only.';
+  static const nonDisplacedDesc = 'A fracture where the bone is broken but remains aligned.';
+  static const hairlineFractureDesc = 'A very thin crack in the bone that may be difficult to see early.';
+  static const softTissueDesc =
+      'Includes muscles, ligaments, tendons, and skin. Injuries may involve soft tissue with or without a fracture.';
+  static const ligamentDesc = 'A strong band connecting bone to bone that helps stabilize joints.';
+  static const jointDesc = 'The place where two bones meet, allowing movement.';
+  static const boneDensityDesc = 'Refers to how compact and strong a bone is.';
+
+  static const medicalTermsFooter =
+      'Medical terms can have different meanings depending on the situation. Always consult a qualified doctor for personal medical advice.';
+
+  static const mythsFactsTitle = 'Myths & Facts';
+
+  static const myth1 = 'All fractures are serious and need surgery';
+  static const myth2 = 'If you can move the limb, it cannot be fractured';
+  static const myth3 = 'Only major accidents cause fractures';
+  static const myth4 = 'Bone pain always means a fracture';
+  static const myth5 = 'Hairline fractures are not real fractures';
+  static const myth6 = 'Fractures always show up immediately';
+  static const myth7 = 'Bone problems only affect older people';
+  static const myth8 = 'Once a bone heals, it never causes problems again';
+
+  static const fact1 = 'Fractures vary widely. The term fracture does not define treatment.';
+  static const fact2 = 'Movement may still be possible even with a fracture.';
+  static const fact3 = 'Smaller falls or injuries can also cause fractures.';
+  static const fact4 = 'Pain can also come from muscles, ligaments, joints, or soft tissues.';
+  static const fact5 = ' A crack in the bone is still a fracture.';
+  static const fact6 = 'Some fractures may not be obvious early.';
+  static const fact7 = 'Bone injuries can occur at any age.';
+  static const fact8 = 'Bones change over time, and past injuries may still matter.';
+
+  static const mythsFooter = 'Health decisions should always be discussed with a qualified medical professional.';
+
+  static const redFlagsTitle = 'Red Flags & Emergencies';
+  static const redFlagsPoints = '''• Red flags are warning signs, not diagnoses.
+• Absence of red flags does not guarantee safety.
+• Delay in care can worsen outcomes.''';
+
+  static const severe = '• Severe or worsening painy';
+  static const visible = '• Visible deformity';
+  static const inabilityToMove = '• Inability to move or bear weight';
+  static const numbness = '• Numbness or tingling';
+  static const openWounds = '• Open wounds or visible bone';
+  static const majorInjury = '• Major injury mechanism';
+
+  static const severeDes = 'Pain that is intense, increasing, or not improving with rest.';
+  static const visibleDes = 'Limb appears bent, twisted, or abnormally shaped.';
+  static const inabilityToMoveDes = 'Unable to stand, walk, or use the limb.';
+  static const numbnessDes = 'Pins-and-needles sensation or loss of feeling in fingers or toes.';
+  static const openWoundsDes = 'Skin broken near injury or bone visible.';
+  static const majorInjuryDes = 'High-impact accidents or falls from height.';
+
+  static const emergencyFooter =
+      'This is not a decision tool. If you are unsure, worried, or symptoms feel serious, seek emergency medical care immediately.';
 }
